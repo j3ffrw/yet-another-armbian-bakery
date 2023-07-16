@@ -9,7 +9,7 @@ wifi_country="YOUR_COUNTRY_CODE_MINE_WAS_BR"
 wifi_name="YOUR_SSID"
 wifi_password="YOUR_PASSWORD"
 
-# version can be either Lite, Medium, or Full
+# Check the latest version on the official website.
 os_version=Jammy_current
 
 # Official website
