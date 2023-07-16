@@ -1,0 +1,16 @@
+### Generate the password hash using `mkpasswd -m sha512crypt`
+root_password_hash='ROOT_PASSWORD_GENERATED_BY_THE_COMMAND_ABOVE'
+pi_password_hash='PI_PASSWORD_GENERATED_BY_THE_COMMAND_ABOVE'
+
+### ssh-keygen -t ed25519 -f ./id_ed25519 -C "Orange Pi key for Ansible"
+public_key_file="PATH_TO_YOUR_key.pub"
+
+wifi_country="YOUR_COUNTRY_CODE_MINE_WAS_BR"
+wifi_name="YOUR_SSID"
+wifi_password="YOUR_PASSWORD"
+
+# version can be either Lite, Medium, or Full
+os_version=Jammy_current
+
+# Official website
+download_site="https://redirect.armbian.com"
