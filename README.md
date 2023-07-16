@@ -28,5 +28,5 @@ sudo bake-armbian.sh
 Right after it finishes, you can write the `.img` to your SD card.
 
 ```bash
-You can execute: dd bs=4M status=progress if=NEW_IMAGE.IMG of=/dev/xyz
+dd bs=4M status=progress if=NEW_IMAGE.IMG of=/dev/xyz
 ```
