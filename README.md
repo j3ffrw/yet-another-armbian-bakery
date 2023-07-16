@@ -1,4 +1,5 @@
 # yet-another-armbian-bakery
+
 Bake Your Perfect (almost) Armbian Image.
 
 I already use this method inspired on this script [here](https://github.com/kenfallon/fix-ssh-on-pi/blob/master/fix-ssh-on-pi.bash) for a raspberry-pi board it works without any issues, I've customized the script to my own needs. 
@@ -12,6 +13,20 @@ The main goal is:
 - Make some small adjustments on SSH configuration.
 - Change root password.
 - Add a pi user.
-- Add a public key so I can connect orange pi through and manage it through ansible.
+- Add a public key so I can connect orange pi through and manage it through ansible (important topic).
 
 The script it's pretty simple, you have to change the properties file accordling to your needs.
+
+# How to execute?
+
+```bash
+git clone https://github.com/thiagosanches/yet-another-armbian-bakery.git
+cd yet-another-armbian-bakery
+sudo bake-armbian.sh
+```
+
+Right after it finishes, you can write the `.img` to your SD card.
+
+```bash
+You can execute: dd bs=4M status=progress if=NEW_IMAGE.IMG of=/dev/xyz
+```
