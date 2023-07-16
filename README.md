@@ -9,7 +9,7 @@ However, recenytly I got an orange-pi 4 board, which suits better with a Armbian
 **I understand that it may not be the most elegant solution, but due to the limitations of removing it via systemd during the baking process, I resorted to trying this alternative approach.**
 
 The main goal is:
-- Configure the WIFI.
+- WIFI up at the first boot.
 - Make some small adjustments on SSH configuration.
 - Change root password.
 - Add a pi user.
