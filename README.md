@@ -4,12 +4,9 @@ Bake Your Perfect (almost) Armbian Image.
 
 I already use this method inspired on this script [here](https://github.com/kenfallon/fix-ssh-on-pi/blob/master/fix-ssh-on-pi.bash) for a raspberry-pi board it works without any issues, I've customized the script to my own needs. 
 
-However, recenytly I got an orange-pi 4 board, which suits better with a Armbian distro. I decided to use the same technique, but I was facing an issue with `NetworkManager` that conflicts with `wpa_supplicant`, I've tried any approaches and the last option was to **rename** the folder of the NetworkManager, and that worked! No more conflitcts and I was able to get the wifi connected on the FIRST boot, right after writing to the SD card! 
-
-**I understand that it may not be the most elegant solution, but due to the limitations of removing it via systemd during the baking process, I resorted to trying this alternative approach.**
-
 The main goal is:
-- WIFI up at the first boot.
+- WIFI up at the first boot by disabling the NetworkManager
+  and enabling systemd-networkd and wpa_supplicant.
 - Make some small adjustments on SSH configuration.
 - Change root password.
 - Add a pi user.
@@ -22,7 +19,10 @@ The script it's pretty simple, you have to change the properties file accordling
 ```bash
 git clone https://github.com/thiagosanches/yet-another-armbian-bakery.git
 cd yet-another-armbian-bakery
-sudo bake-armbian.sh
+cp properties.armbian.template properties.armbian
+sudo bake-armbian.sh 
+# or provide your own properties stored somewhere else.
+sudo bake-armbian.sh $HOME/my-properties.armbian
 ```
 
 Right after it finishes, you can write the `.img` to your SD card.

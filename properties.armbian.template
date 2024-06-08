@@ -1,6 +1,7 @@
 ### Generate the password hash using `mkpasswd -m sha512crypt`
 root_password_hash='ROOT_PASSWORD_GENERATED_BY_THE_COMMAND_ABOVE'
-pi_password_hash='PI_PASSWORD_GENERATED_BY_THE_COMMAND_ABOVE'
+extra_user_password_hash='PI_PASSWORD_GENERATED_BY_THE_COMMAND_ABOVE'
+extra_user_name='pi'
 
 ### ssh-keygen -t ed25519 -f ./id_ed25519 -C "Orange Pi key for Ansible"
 public_key_file="PATH_TO_YOUR_key.pub"
@@ -14,3 +15,6 @@ os_version=Jammy_current
 
 # Official website
 download_site="https://redirect.armbian.com"
+
+# or point to an existing armbian image 
+#downloaded_image=/pathToYourImage/Armbian_community_24.8.0-trunk.6_Orangepizero2w_bookworm_current_6.6.31_minimal.img.xz
